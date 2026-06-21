@@ -1,0 +1,69 @@
+name: 記事投稿
+description: 記事のDrive投入からWordPress投稿までを追跡
+title: "[記事] "
+labels: ["incoming"]
+body:
+  - type: input
+    id: article_id
+    attributes:
+      label: article_id
+      placeholder: KETO-202606-001
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: title
+      placeholder: 記事タイトル
+  - type: input
+    id: slug
+    attributes:
+      label: slug
+      placeholder: keto-gaishoku
+  - type: dropdown
+    id: site
+    attributes:
+      label: site
+      options:
+        - keto
+        - sleep
+        - infidelity
+  - type: input
+    id: drive_zip_file_id
+    attributes:
+      label: drive_zip_file_id
+  - type: input
+    id: drive_manifest_file_id
+    attributes:
+      label: drive_manifest_file_id
+  - type: input
+    id: checksum_zip
+    attributes:
+      label: checksum_zip
+      placeholder: sha256:...
+  - type: input
+    id: image_count
+    attributes:
+      label: image_count
+      placeholder: "4"
+  - type: dropdown
+    id: processing_status
+    attributes:
+      label: processing_status
+      options:
+        - pending
+        - processing
+        - done
+        - failed
+  - type: input
+    id: wordpress_url
+    attributes:
+      label: wordpress_url
+  - type: input
+    id: processing_time_sec
+    attributes:
+      label: processing_time_sec
+  - type: textarea
+    id: error_message
+    attributes:
+      label: error_message
